@@ -20,7 +20,7 @@
 
 </nav>
 
-<div class="col-md-1">
+<!-- <div class="col-md-1">
 
 </div>
 
@@ -48,11 +48,49 @@
     			<h3 class="panel-title">Panel title</h3>
 			</div>
   			<div class="panel-body">
-    			Panel content
+    			<script type="text/javascript" src="js/custom.js">
+	
+				</script>
   			</div>
 		</div>
 	</center>
+</div> -->
+
+
+<div>
+	<button id='1' type="button" onclick="insert()" class="btn btn-warning">Insert</button>
+	<button id='2' type="button" onmouseover="insert()" onmouseout="remove()" class="btn btn-warning">Hover</button>
+	<button id='3' type="button" onclick="changeColor()" class="btn btn-warning">Change</button>
+	<button id='6' type="button" onclick="modifyText()" class="btn btn-warning">Modify</button>
 </div>
+<br>
+<img src="" id='4'>
+<div id="5">
+	hi
+</div>
+
+<script type="text/javascript">
+	function insert() {
+		var image = document.getElementById("4");
+		image.src = "car.jpeg";
+	}
+
+	function remove() {
+		var image = document.getElementById("4");
+		image.src = "";
+	}
+
+	var color = ["blue", "red", "black", "orange"];
+	function changeColor() {
+		var btn = document.getElementById("3");
+		btn.style.backgroundColor = color[Math.floor(Math.random() * color.length)];
+	}
+
+	function modifyText() {
+		document.getElementById("5").innerHTML = "Hello";
+	}
+
+</script>
 
 
 </body>
