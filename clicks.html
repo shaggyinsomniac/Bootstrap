@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Clicks</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<button id="bt1" onclick="counter()">Click!</button>
+<br>
+<p>
+	Number of clicks:<span id="num"> 0</span>
+</p>
+
+<script type="text/javascript">
+	var clicks = 0;
+	function counter() {
+		clicks++;
+		document.getElementById("num").innerHTML = clicks;
+	}
+</script>
+
+</body>
+</html>
